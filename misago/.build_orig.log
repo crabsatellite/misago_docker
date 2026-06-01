@@ -1,0 +1,605 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.bak
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile.bak
+#1 transferring dockerfile: 869B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-bookworm
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 53B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-bookworm@sha256:8dd81e8af2310a82de426a9e406b0776b8b135a51173bdea90869196c0e5ec88
+#5 resolve docker.io/library/python:3.12-bookworm@sha256:8dd81e8af2310a82de426a9e406b0776b8b135a51173bdea90869196c0e5ec88 0.0s done
+#5 CACHED
+
+#4 [internal] load build context
+#4 transferring context: 2.30MB 0.2s done
+#4 DONE 0.2s
+
+#6 [2/6] RUN apt-get update &&     apt-get install -y --allow-unauthenticated       vim       libffi-dev       libssl-dev       libjpeg-dev       libopenjp2-7-dev       locales       cron       postgresql-client-15       gettext &&     apt-get clean
+#6 0.382 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#6 0.404 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#6 0.425 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#6 0.460 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#6 1.420 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#6 1.432 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+#6 2.028 Fetched 9346 kB in 2s (5554 kB/s)
+#6 2.028 Reading package lists...
+#6 2.375 Reading package lists...
+#6 2.731 Building dependency tree...
+#6 2.824 Reading state information...
+#6 2.908 libffi-dev is already the newest version (3.4.4-1).
+#6 2.908 libssl-dev is already the newest version (3.0.18-1~deb12u2).
+#6 2.908 libjpeg-dev is already the newest version (1:2.1.5-2).
+#6 2.908 libopenjp2-7-dev is already the newest version (2.5.0-2+deb12u2).
+#6 2.908 libopenjp2-7-dev set to manually installed.
+#6 2.908 The following additional packages will be installed:
+#6 2.908   bsd-mailx cron-daemon-common exim4-base exim4-config exim4-daemon-light
+#6 2.908   gettext-base libc-l10n libgnutls-dane0 libgpm2 libidn12 liblockfile-bin
+#6 2.908   liblockfile1 libsodium23 libunbound8 postgresql-client-common psmisc
+#6 2.908   vim-common vim-runtime xxd
+#6 2.908 Suggested packages:
+#6 2.908   anacron logrotate checksecurity exim4-doc-html | exim4-doc-info eximon4
+#6 2.908   spf-tools-perl swaks autopoint gettext-doc libasprintf-dev libgettextpo-dev
+#6 2.908   dns-root-data gpm postgresql-15 postgresql-doc-15 ctags vim-doc vim-scripts
+#6 2.993 The following NEW packages will be installed:
+#6 2.993   bsd-mailx cron cron-daemon-common exim4-base exim4-config exim4-daemon-light
+#6 2.993   gettext gettext-base libc-l10n libgnutls-dane0 libgpm2 libidn12
+#6 2.994   liblockfile-bin liblockfile1 libsodium23 libunbound8 locales
+#6 2.994   postgresql-client-15 postgresql-client-common psmisc vim vim-common
+#6 2.994   vim-runtime xxd
+#6 3.033 0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+#6 3.033 Need to get 20.3 MB of archives.
+#6 3.033 After this operation, 85.5 MB of additional disk space will be used.
+#6 3.033 Get:1 http://deb.debian.org/debian bookworm/main amd64 cron-daemon-common all 3.0pl1-162 [12.7 kB]
+#6 3.044 Get:2 http://deb.debian.org/debian bookworm/main amd64 cron amd64 3.0pl1-162 [73.1 kB]
+#6 3.063 Get:3 http://deb.debian.org/debian bookworm/main amd64 vim-common all 2:9.0.1378-2+deb12u2 [125 kB]
+#6 3.078 Get:4 http://deb.debian.org/debian bookworm/main amd64 gettext-base amd64 0.21-12 [160 kB]
+#6 3.101 Get:5 http://deb.debian.org/debian bookworm/main amd64 libc-l10n all 2.36-9+deb12u13 [677 kB]
+#6 3.179 Get:6 http://deb.debian.org/debian bookworm/main amd64 liblockfile-bin amd64 1.17-1+b1 [20.8 kB]
+#6 3.191 Get:7 http://deb.debian.org/debian bookworm/main amd64 locales all 2.36-9+deb12u13 [3901 kB]
+#6 3.689 Get:8 http://deb.debian.org/debian bookworm/main amd64 exim4-config all 4.96-15+deb12u7 [256 kB]
+#6 3.742 Get:9 http://deb.debian.org/debian bookworm/main amd64 exim4-base amd64 4.96-15+deb12u7 [1118 kB]
+#6 3.877 Get:10 http://deb.debian.org/debian bookworm/main amd64 libunbound8 amd64 1.17.1-2+deb12u4 [553 kB]
+#6 3.942 Get:11 http://deb.debian.org/debian-security bookworm-security/main amd64 libgnutls-dane0 amd64 3.7.9-2+deb12u6 [407 kB]
+#6 3.987 Get:12 http://deb.debian.org/debian bookworm/main amd64 libidn12 amd64 1.41-1 [83.8 kB]
+#6 3.994 Get:13 http://deb.debian.org/debian bookworm/main amd64 exim4-daemon-light amd64 4.96-15+deb12u7 [605 kB]
+#6 4.125 Get:14 http://deb.debian.org/debian bookworm/main amd64 liblockfile1 amd64 1.17-1+b1 [17.0 kB]
+#6 4.126 Get:15 http://deb.debian.org/debian bookworm/main amd64 bsd-mailx amd64 8.1.2-0.20220412cvs-1 [90.4 kB]
+#6 4.136 Get:16 http://deb.debian.org/debian bookworm/main amd64 gettext amd64 0.21-12 [1300 kB]
+#6 4.312 Get:17 http://deb.debian.org/debian bookworm/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
+#6 4.313 Get:18 http://deb.debian.org/debian-security bookworm-security/main amd64 libsodium23 amd64 1.0.18-1+deb12u1 [162 kB]
+#6 4.343 Get:19 http://deb.debian.org/debian bookworm/main amd64 postgresql-client-common all 248+deb12u1 [35.2 kB]
+#6 4.351 Get:20 http://deb.debian.org/debian-security bookworm-security/main amd64 postgresql-client-15 amd64 15.16-0+deb12u1 [1741 kB]
+#6 4.578 Get:21 http://deb.debian.org/debian bookworm/main amd64 psmisc amd64 23.6-1 [259 kB]
+#6 4.632 Get:22 http://deb.debian.org/debian bookworm/main amd64 vim-runtime all 2:9.0.1378-2+deb12u2 [7027 kB]
+#6 5.457 Get:23 http://deb.debian.org/debian bookworm/main amd64 vim amd64 2:9.0.1378-2+deb12u2 [1568 kB]
+#6 5.649 Get:24 http://deb.debian.org/debian bookworm/main amd64 xxd amd64 2:9.0.1378-2+deb12u2 [84.1 kB]
+#6 5.781 debconf: delaying package configuration, since apt-utils is not installed
+#6 5.805 Fetched 20.3 MB in 3s (7636 kB/s)
+#6 5.846 Selecting previously unselected package cron-daemon-common.
+#6 5.846 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23973 files and directories currently installed.)
+#6 5.918 Preparing to unpack .../cron-daemon-common_3.0pl1-162_all.deb ...
+#6 5.927 Unpacking cron-daemon-common (3.0pl1-162) ...
+#6 5.989 Setting up cron-daemon-common (3.0pl1-162) ...
+#6 6.084 Adding group `crontab' (GID 102) ...
+#6 6.125 Done.
+#6 6.195 Selecting previously unselected package cron.
+#6 6.195 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23991 files and directories currently installed.)
+#6 6.203 Preparing to unpack .../00-cron_3.0pl1-162_amd64.deb ...
+#6 6.213 Unpacking cron (3.0pl1-162) ...
+#6 6.288 Selecting previously unselected package vim-common.
+#6 6.290 Preparing to unpack .../01-vim-common_2%3a9.0.1378-2+deb12u2_all.deb ...
+#6 6.298 Unpacking vim-common (2:9.0.1378-2+deb12u2) ...
+#6 6.373 Selecting previously unselected package gettext-base.
+#6 6.374 Preparing to unpack .../02-gettext-base_0.21-12_amd64.deb ...
+#6 6.382 Unpacking gettext-base (0.21-12) ...
+#6 6.493 Selecting previously unselected package libc-l10n.
+#6 6.494 Preparing to unpack .../03-libc-l10n_2.36-9+deb12u13_all.deb ...
+#6 6.502 Unpacking libc-l10n (2.36-9+deb12u13) ...
+#6 6.578 Selecting previously unselected package liblockfile-bin.
+#6 6.580 Preparing to unpack .../04-liblockfile-bin_1.17-1+b1_amd64.deb ...
+#6 6.588 Unpacking liblockfile-bin (1.17-1+b1) ...
+#6 6.661 Selecting previously unselected package locales.
+#6 6.663 Preparing to unpack .../05-locales_2.36-9+deb12u13_all.deb ...
+#6 6.671 Unpacking locales (2.36-9+deb12u13) ...
+#6 6.951 Selecting previously unselected package exim4-config.
+#6 6.952 Preparing to unpack .../06-exim4-config_4.96-15+deb12u7_all.deb ...
+#6 6.961 Unpacking exim4-config (4.96-15+deb12u7) ...
+#6 7.042 Selecting previously unselected package exim4-base.
+#6 7.043 Preparing to unpack .../07-exim4-base_4.96-15+deb12u7_amd64.deb ...
+#6 7.053 Unpacking exim4-base (4.96-15+deb12u7) ...
+#6 7.139 Selecting previously unselected package libunbound8:amd64.
+#6 7.140 Preparing to unpack .../08-libunbound8_1.17.1-2+deb12u4_amd64.deb ...
+#6 7.157 Unpacking libunbound8:amd64 (1.17.1-2+deb12u4) ...
+#6 7.242 Selecting previously unselected package libgnutls-dane0:amd64.
+#6 7.243 Preparing to unpack .../09-libgnutls-dane0_3.7.9-2+deb12u6_amd64.deb ...
+#6 7.252 Unpacking libgnutls-dane0:amd64 (3.7.9-2+deb12u6) ...
+#6 7.321 Selecting previously unselected package libidn12:amd64.
+#6 7.322 Preparing to unpack .../10-libidn12_1.41-1_amd64.deb ...
+#6 7.331 Unpacking libidn12:amd64 (1.41-1) ...
+#6 7.405 Selecting previously unselected package exim4-daemon-light.
+#6 7.407 Preparing to unpack .../11-exim4-daemon-light_4.96-15+deb12u7_amd64.deb ...
+#6 7.415 Unpacking exim4-daemon-light (4.96-15+deb12u7) ...
+#6 7.500 Selecting previously unselected package liblockfile1:amd64.
+#6 7.502 Preparing to unpack .../12-liblockfile1_1.17-1+b1_amd64.deb ...
+#6 7.510 Unpacking liblockfile1:amd64 (1.17-1+b1) ...
+#6 7.572 Selecting previously unselected package bsd-mailx.
+#6 7.573 Preparing to unpack .../13-bsd-mailx_8.1.2-0.20220412cvs-1_amd64.deb ...
+#6 7.582 Unpacking bsd-mailx (8.1.2-0.20220412cvs-1) ...
+#6 7.644 Selecting previously unselected package gettext.
+#6 7.645 Preparing to unpack .../14-gettext_0.21-12_amd64.deb ...
+#6 7.654 Unpacking gettext (0.21-12) ...
+#6 7.770 Selecting previously unselected package libgpm2:amd64.
+#6 7.771 Preparing to unpack .../15-libgpm2_1.20.7-10+b1_amd64.deb ...
+#6 7.780 Unpacking libgpm2:amd64 (1.20.7-10+b1) ...
+#6 7.846 Selecting previously unselected package libsodium23:amd64.
+#6 7.847 Preparing to unpack .../16-libsodium23_1.0.18-1+deb12u1_amd64.deb ...
+#6 7.856 Unpacking libsodium23:amd64 (1.0.18-1+deb12u1) ...
+#6 7.927 Selecting previously unselected package postgresql-client-common.
+#6 7.928 Preparing to unpack .../17-postgresql-client-common_248+deb12u1_all.deb ...
+#6 7.937 Unpacking postgresql-client-common (248+deb12u1) ...
+#6 8.004 Selecting previously unselected package postgresql-client-15.
+#6 8.005 Preparing to unpack .../18-postgresql-client-15_15.16-0+deb12u1_amd64.deb ...
+#6 8.014 Unpacking postgresql-client-15 (15.16-0+deb12u1) ...
+#6 8.168 Selecting previously unselected package psmisc.
+#6 8.170 Preparing to unpack .../19-psmisc_23.6-1_amd64.deb ...
+#6 8.178 Unpacking psmisc (23.6-1) ...
+#6 8.264 Selecting previously unselected package vim-runtime.
+#6 8.266 Preparing to unpack .../20-vim-runtime_2%3a9.0.1378-2+deb12u2_all.deb ...
+#6 8.280 Adding 'diversion of /usr/share/vim/vim90/doc/help.txt to /usr/share/vim/vim90/doc/help.txt.vim-tiny by vim-runtime'
+#6 8.293 Adding 'diversion of /usr/share/vim/vim90/doc/tags to /usr/share/vim/vim90/doc/tags.vim-tiny by vim-runtime'
+#6 8.298 Unpacking vim-runtime (2:9.0.1378-2+deb12u2) ...
+#6 8.646 Selecting previously unselected package vim.
+#6 8.648 Preparing to unpack .../21-vim_2%3a9.0.1378-2+deb12u2_amd64.deb ...
+#6 8.657 Unpacking vim (2:9.0.1378-2+deb12u2) ...
+#6 8.778 Selecting previously unselected package xxd.
+#6 8.779 Preparing to unpack .../22-xxd_2%3a9.0.1378-2+deb12u2_amd64.deb ...
+#6 8.787 Unpacking xxd (2:9.0.1378-2+deb12u2) ...
+#6 8.846 Setting up postgresql-client-common (248+deb12u1) ...
+#6 8.889 Setting up libc-l10n (2.36-9+deb12u13) ...
+#6 8.915 Setting up libsodium23:amd64 (1.0.18-1+deb12u1) ...
+#6 8.940 Setting up libgpm2:amd64 (1.20.7-10+b1) ...
+#6 8.964 Setting up liblockfile-bin (1.17-1+b1) ...
+#6 8.990 Setting up psmisc (23.6-1) ...
+#6 9.018 Setting up cron (3.0pl1-162) ...
+#6 9.081 invoke-rc.d: could not determine current runlevel
+#6 9.084 invoke-rc.d: policy-rc.d denied execution of start.
+#6 9.166 Setting up gettext-base (0.21-12) ...
+#6 9.192 Setting up postgresql-client-15 (15.16-0+deb12u1) ...
+#6 9.595 update-alternatives: using /usr/share/postgresql/15/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+#6 9.629 Setting up locales (2.36-9+deb12u13) ...
+#6 9.699 debconf: unable to initialize frontend: Dialog
+#6 9.699 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 9.699 debconf: falling back to frontend: Readline
+#6 9.705 debconf: unable to initialize frontend: Readline
+#6 9.705 debconf: (This frontend requires a controlling tty.)
+#6 9.705 debconf: falling back to frontend: Teletype
+#6 10.05 Generating locales (this might take a while)...
+#6 10.06 Generation complete.
+#6 10.09 Setting up xxd (2:9.0.1378-2+deb12u2) ...
+#6 10.12 Setting up libunbound8:amd64 (1.17.1-2+deb12u4) ...
+#6 10.14 Setting up vim-common (2:9.0.1378-2+deb12u2) ...
+#6 10.18 Setting up libidn12:amd64 (1.41-1) ...
+#6 10.21 Setting up exim4-config (4.96-15+deb12u7) ...
+#6 10.64 debconf: unable to initialize frontend: Dialog
+#6 10.64 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 10.64 debconf: falling back to frontend: Readline
+#6 10.65 debconf: unable to initialize frontend: Readline
+#6 10.65 debconf: (This frontend requires a controlling tty.)
+#6 10.65 debconf: falling back to frontend: Teletype
+#6 10.69 Adding system-user for exim (v4)
+#6 14.94 Setting up liblockfile1:amd64 (1.17-1+b1) ...
+#6 14.97 Setting up vim-runtime (2:9.0.1378-2+deb12u2) ...
+#6 15.05 Setting up libgnutls-dane0:amd64 (3.7.9-2+deb12u6) ...
+#6 15.08 Setting up gettext (0.21-12) ...
+#6 15.10 Setting up exim4-base (4.96-15+deb12u7) ...
+#6 15.19 debconf: unable to initialize frontend: Dialog
+#6 15.19 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 15.19 debconf: falling back to frontend: Readline
+#6 15.20 debconf: unable to initialize frontend: Readline
+#6 15.20 debconf: (This frontend requires a controlling tty.)
+#6 15.20 debconf: falling back to frontend: Teletype
+#6 15.21 exim: DB upgrade, deleting hints-db
+#6 15.31 Setting up vim (2:9.0.1378-2+deb12u2) ...
+#6 15.33 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+#6 15.34 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+#6 15.34 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+#6 15.35 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+#6 15.36 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+#6 15.36 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+#6 15.37 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+#6 15.38 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+#6 15.39 Setting up exim4-daemon-light (4.96-15+deb12u7) ...
+#6 15.45 debconf: unable to initialize frontend: Dialog
+#6 15.45 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 15.45 debconf: falling back to frontend: Readline
+#6 15.45 debconf: unable to initialize frontend: Readline
+#6 15.45 debconf: (This frontend requires a controlling tty.)
+#6 15.45 debconf: falling back to frontend: Teletype
+#6 15.46 invoke-rc.d: could not determine current runlevel
+#6 15.46 invoke-rc.d: policy-rc.d denied execution of start.
+#6 15.48 Setting up bsd-mailx (8.1.2-0.20220412cvs-1) ...
+#6 15.51 update-alternatives: using /usr/bin/bsd-mailx to provide /usr/bin/mailx (mailx) in auto mode
+#6 15.52 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#6 15.63 Processing triggers for hicolor-icon-theme (0.17-2) ...
+#6 DONE 15.7s
+
+#7 [3/6] ADD . /misago
+#7 DONE 0.1s
+
+#8 [4/6] WORKDIR /misago
+#8 DONE 0.1s
+
+#9 [5/6] RUN pip install --upgrade pip &&     pip install -r requirements.txt
+#9 1.246 Requirement already satisfied: pip in /usr/local/lib/python3.12/site-packages (25.0.1)
+#9 1.349 Collecting pip
+#9 1.417   Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+#9 1.435 Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+#9 1.719    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.7 MB/s eta 0:00:00
+#9 1.731 Installing collected packages: pip
+#9 1.732   Attempting uninstall: pip
+#9 1.733     Found existing installation: pip 25.0.1
+#9 1.754     Uninstalling pip-25.0.1:
+#9 1.870       Successfully uninstalled pip-25.0.1
+#9 2.425 Successfully installed pip-26.0.1
+#9 2.425 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 3.307 Collecting aiohttp==3.9.1 (from -r requirements.txt (line 7))
+#9 3.376   Downloading aiohttp-3.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+#9 3.413 Collecting aiosignal==1.3.1 (from -r requirements.txt (line 11))
+#9 3.461   Downloading aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+#9 3.500 Collecting amqp==5.2.0 (from -r requirements.txt (line 15))
+#9 3.509   Downloading amqp-5.2.0-py3-none-any.whl.metadata (8.9 kB)
+#9 3.549 Collecting anyio==4.2.0 (from -r requirements.txt (line 19))
+#9 3.558   Downloading anyio-4.2.0-py3-none-any.whl.metadata (4.6 kB)
+#9 3.600 Collecting ariadne==0.21 (from -r requirements.txt (line 23))
+#9 3.778   Downloading ariadne-0.21-py2.py3-none-any.whl.metadata (9.2 kB)
+#9 3.815 Collecting ariadne-django==0.3.0 (from -r requirements.txt (line 27))
+#9 3.822   Downloading ariadne_django-0.3.0-py3-none-any.whl.metadata (5.8 kB)
+#9 3.876 Collecting asgiref==3.7.2 (from -r requirements.txt (line 29))
+#9 3.891   Downloading asgiref-3.7.2-py3-none-any.whl.metadata (9.2 kB)
+#9 3.925 Collecting attrs==23.1.0 (from -r requirements.txt (line 33))
+#9 3.934   Downloading attrs-23.1.0-py3-none-any.whl.metadata (11 kB)
+#9 3.987 Collecting billiard==4.2.0 (from -r requirements.txt (line 37))
+#9 3.997   Downloading billiard-4.2.0-py3-none-any.whl.metadata (4.4 kB)
+#9 4.054 Collecting black==23.12.0 (from -r requirements.txt (line 41))
+#9 4.290   Downloading black-23.12.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (68 kB)
+#9 4.347 Collecting celery==5.3.6 (from celery[redis]==5.3.6->-r requirements.txt (line 43))
+#9 4.356   Downloading celery-5.3.6-py3-none-any.whl.metadata (21 kB)
+#9 4.414 Collecting certifi==2023.11.17 (from -r requirements.txt (line 45))
+#9 4.456   Downloading certifi-2023.11.17-py3-none-any.whl.metadata (2.2 kB)
+#9 4.590 Collecting cffi==1.16.0 (from -r requirements.txt (line 50))
+#9 4.599   Downloading cffi-1.16.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+#9 4.683 Collecting charset-normalizer==3.3.2 (from -r requirements.txt (line 54))
+#9 4.695   Downloading charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+#9 4.733 Collecting click==8.1.7 (from -r requirements.txt (line 58))
+#9 4.741   Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+#9 4.777 Collecting click-didyoumean==0.3.0 (from -r requirements.txt (line 66))
+#9 4.786   Downloading click_didyoumean-0.3.0-py3-none-any.whl.metadata (495 bytes)
+#9 4.823 Collecting click-plugins==1.1.1 (from -r requirements.txt (line 70))
+#9 4.831   Downloading click_plugins-1.1.1-py2.py3-none-any.whl.metadata (6.4 kB)
+#9 4.871 Collecting click-repl==0.3.0 (from -r requirements.txt (line 74))
+#9 4.880   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#9 5.173 Collecting coverage==6.5.0 (from coverage[toml]==6.5.0->-r requirements.txt (line 78))
+#9 5.185   Downloading coverage-6.5.0.tar.gz (775 kB)
+#9 5.295      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.2/775.2 kB 6.7 MB/s  0:00:00
+#9 5.368   Installing build dependencies: started
+#9 6.227   Installing build dependencies: finished with status 'done'
+#9 6.227   Getting requirements to build wheel: started
+#9 6.472   Getting requirements to build wheel: finished with status 'done'
+#9 6.473   Preparing metadata (pyproject.toml): started
+#9 6.605   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 6.634 Collecting coveralls==3.3.1 (from -r requirements.txt (line 83))
+#9 6.646   Downloading coveralls-3.3.1-py2.py3-none-any.whl.metadata (5.0 kB)
+#9 6.826 Collecting cryptography==41.0.7 (from -r requirements.txt (line 85))
+#9 6.835   Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+#9 6.866 Collecting defusedxml==0.8.0rc2 (from -r requirements.txt (line 89))
+#9 6.873   Downloading defusedxml-0.8.0rc2-py2.py3-none-any.whl.metadata (33 kB)
+#9 6.938 Collecting django==4.2.8 (from -r requirements.txt (line 94))
+#9 6.947   Downloading Django-4.2.8-py3-none-any.whl.metadata (4.2 kB)
+#9 7.146 Collecting django-anymail==10.2 (from -r requirements.txt (line 105))
+#9 7.158   Downloading django_anymail-10.2-py3-none-any.whl.metadata (10 kB)
+#9 7.199 Collecting django-debug-toolbar==4.2.0 (from -r requirements.txt (line 107))
+#9 7.368   Downloading django_debug_toolbar-4.2.0-py3-none-any.whl.metadata (3.8 kB)
+#9 7.400 Collecting django-js-asset==2.2.0 (from -r requirements.txt (line 109))
+#9 7.408   Downloading django_js_asset-2.2.0-py3-none-any.whl.metadata (3.5 kB)
+#9 7.438 Collecting django-mptt==0.15.0 (from -r requirements.txt (line 113))
+#9 7.606   Downloading django_mptt-0.15.0-py3-none-any.whl.metadata (5.1 kB)
+#9 7.635 Collecting django-simple-sso==1.2.0 (from -r requirements.txt (line 115))
+#9 7.648   Downloading django_simple_sso-1.2.0-py3-none-any.whl.metadata (8.0 kB)
+#9 7.687 Collecting djangorestframework==3.14.0 (from -r requirements.txt (line 117))
+#9 7.697   Downloading djangorestframework-3.14.0-py3-none-any.whl.metadata (10 kB)
+#9 7.730 Collecting docopt==0.6.2 (from -r requirements.txt (line 119))
+#9 7.748   Downloading docopt-0.6.2.tar.gz (25 kB)
+#9 7.762   Installing build dependencies: started
+#9 8.147   Installing build dependencies: finished with status 'done'
+#9 8.147   Getting requirements to build wheel: started
+#9 8.368   Getting requirements to build wheel: finished with status 'done'
+#9 8.369   Preparing metadata (pyproject.toml): started
+#9 8.494   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 8.556 Collecting faker==21.0.0 (from -r requirements.txt (line 123))
+#9 8.739   Downloading Faker-21.0.0-py3-none-any.whl.metadata (15 kB)
+#9 8.855 Collecting frozenlist==1.4.1 (from -r requirements.txt (line 125))
+#9 8.871   Downloading frozenlist-1.4.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+#9 8.920 Collecting graphql-core==3.2.3 (from -r requirements.txt (line 130))
+#9 8.933   Downloading graphql_core-3.2.3-py3-none-any.whl.metadata (10 kB)
+#9 8.968 Collecting html5lib==1.1 (from -r requirements.txt (line 134))
+#9 8.987   Downloading html5lib-1.1-py2.py3-none-any.whl.metadata (16 kB)
+#9 9.022 Collecting idna==3.6 (from -r requirements.txt (line 136))
+#9 9.032   Downloading idna-3.6-py3-none-any.whl.metadata (9.9 kB)
+#9 9.067 Collecting iniconfig==2.0.0 (from -r requirements.txt (line 142))
+#9 9.081   Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+#9 9.116 Collecting itsdangerous==0.24 (from -r requirements.txt (line 146))
+#9 9.124   Downloading itsdangerous-0.24.tar.gz (46 kB)
+#9 9.151   Installing build dependencies: started
+#9 9.549   Installing build dependencies: finished with status 'done'
+#9 9.550   Getting requirements to build wheel: started
+#9 9.749   Getting requirements to build wheel: finished with status 'done'
+#9 9.750   Preparing metadata (pyproject.toml): started
+#9 9.862   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 9.892 Collecting kombu==5.3.4 (from -r requirements.txt (line 151))
+#9 10.07   Downloading kombu-5.3.4-py3-none-any.whl.metadata (3.1 kB)
+#9 10.11 Collecting markdown==3.5.1 (from -r requirements.txt (line 155))
+#9 10.13   Downloading Markdown-3.5.1-py3-none-any.whl.metadata (7.1 kB)
+#9 10.35 Collecting misago==0.39.4 (from -r requirements.txt (line 157))
+#9 10.53   Downloading misago-0.39.4-py3-none-any.whl.metadata (13 kB)
+#9 10.71 Collecting multidict==6.0.4 (from -r requirements.txt (line 159))
+#9 10.72   Downloading multidict-6.0.4.tar.gz (51 kB)
+#9 10.75   Installing build dependencies: started
+#9 11.14   Installing build dependencies: finished with status 'done'
+#9 11.14   Getting requirements to build wheel: started
+#9 11.35   Getting requirements to build wheel: finished with status 'done'
+#9 11.35   Preparing metadata (pyproject.toml): started
+#9 11.47   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 11.49 Collecting mypy-extensions==1.0.0 (from -r requirements.txt (line 164))
+#9 11.50   Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+#9 11.53 Collecting oauthlib==3.2.2 (from -r requirements.txt (line 168))
+#9 11.54   Downloading oauthlib-3.2.2-py3-none-any.whl.metadata (7.5 kB)
+#9 11.56 Collecting packaging==23.2 (from -r requirements.txt (line 173))
+#9 11.57   Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+#9 11.60 Collecting pathspec==0.12.1 (from -r requirements.txt (line 178))
+#9 11.61   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+#9 11.80 Collecting pillow==10.1.0 (from -r requirements.txt (line 182))
+#9 11.81   Downloading Pillow-10.1.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+#9 11.84 Collecting platformdirs==4.1.0 (from -r requirements.txt (line 184))
+#9 11.85   Downloading platformdirs-4.1.0-py3-none-any.whl.metadata (11 kB)
+#9 11.88 Collecting pluggy==1.3.0 (from -r requirements.txt (line 188))
+#9 11.90   Downloading pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+#9 11.95 Collecting prompt-toolkit==3.0.43 (from -r requirements.txt (line 192))
+#9 11.95   Downloading prompt_toolkit-3.0.43-py3-none-any.whl.metadata (6.5 kB)
+#9 11.99 Collecting psycopg==3.1.16 (from psycopg[binary]==3.1.16->-r requirements.txt (line 196))
+#9 12.00   Downloading psycopg-3.1.16-py3-none-any.whl.metadata (4.2 kB)
+#9 12.15 Collecting psycopg-binary==3.1.16 (from -r requirements.txt (line 198))
+#9 12.32   Downloading psycopg_binary-3.1.16-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#9 12.36 Collecting pycparser==2.21 (from -r requirements.txt (line 202))
+#9 12.37   Downloading pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+#9 12.40 Collecting pyjwt==2.8.0 (from -r requirements.txt (line 206))
+#9 12.41   Downloading PyJWT-2.8.0-py3-none-any.whl.metadata (4.2 kB)
+#9 12.46 Collecting pytest==7.4.3 (from -r requirements.txt (line 210))
+#9 12.47   Downloading pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+#9 12.50 Collecting pytest-cov==4.1.0 (from -r requirements.txt (line 217))
+#9 12.51   Downloading pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+#9 12.55 Collecting pytest-django==4.7.0 (from -r requirements.txt (line 219))
+#9 12.56   Downloading pytest_django-4.7.0-py3-none-any.whl.metadata (8.3 kB)
+#9 12.60 Collecting pytest-mock==3.12.0 (from -r requirements.txt (line 221))
+#9 12.61   Downloading pytest_mock-3.12.0-py3-none-any.whl.metadata (3.8 kB)
+#9 12.63 Collecting python-dateutil==2.8.2 (from -r requirements.txt (line 223))
+#9 12.66   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl.metadata (8.2 kB)
+#9 12.69 Collecting python3-openid==3.2.0 (from -r requirements.txt (line 228))
+#9 12.70   Downloading python3_openid-3.2.0-py3-none-any.whl.metadata (1.6 kB)
+#9 12.75 Collecting pytz==2023.3.post1 (from -r requirements.txt (line 232))
+#9 12.76   Downloading pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+#9 12.82 Collecting pyyaml==6.0.1 (from -r requirements.txt (line 236))
+#9 12.84   Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+#9 12.90 Collecting redis==5.0.1 (from -r requirements.txt (line 240))
+#9 12.90   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+#9 12.94 Collecting requests==2.31.0 (from -r requirements.txt (line 244))
+#9 12.95   Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+#9 12.98 Collecting requests-oauthlib==1.3.1 (from -r requirements.txt (line 253))
+#9 13.00   Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl.metadata (10 kB)
+#9 13.03 Collecting responses==0.24.1 (from -r requirements.txt (line 257))
+#9 13.05   Downloading responses-0.24.1-py3-none-any.whl.metadata (46 kB)
+#9 13.37 Collecting ruff==0.1.8 (from -r requirements.txt (line 259))
+#9 13.39   Downloading ruff-0.1.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+#9 13.44 Collecting sentry-sdk==1.39.1 (from -r requirements.txt (line 261))
+#9 13.61   Downloading sentry_sdk-1.39.1-py2.py3-none-any.whl.metadata (9.7 kB)
+#9 13.65 Collecting six==1.16.0 (from -r requirements.txt (line 263))
+#9 13.68   Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+#9 13.71 Collecting sniffio==1.3.0 (from -r requirements.txt (line 268))
+#9 13.72   Downloading sniffio-1.3.0-py3-none-any.whl.metadata (3.6 kB)
+#9 13.76 Collecting social-auth-app-django==5.4.0 (from -r requirements.txt (line 272))
+#9 13.77   Downloading social_auth_app_django-5.4.0-py3-none-any.whl.metadata (3.2 kB)
+#9 13.83 Collecting social-auth-core==4.5.1 (from -r requirements.txt (line 274))
+#9 13.84   Downloading social_auth_core-4.5.1-py3-none-any.whl.metadata (4.1 kB)
+#9 13.88 Collecting sqlparse==0.4.4 (from -r requirements.txt (line 278))
+#9 13.90   Downloading sqlparse-0.4.4-py3-none-any.whl.metadata (4.0 kB)
+#9 13.95 Collecting starlette==0.34.0 (from -r requirements.txt (line 283))
+#9 13.96   Downloading starlette-0.34.0-py3-none-any.whl.metadata (5.8 kB)
+#9 14.16 Collecting syrupy==4.6.0 (from -r requirements.txt (line 287))
+#9 14.35   Downloading syrupy-4.6.0-py3-none-any.whl.metadata (33 kB)
+#9 14.39 Collecting typing-extensions==4.9.0 (from -r requirements.txt (line 289))
+#9 14.40   Downloading typing_extensions-4.9.0-py3-none-any.whl.metadata (3.0 kB)
+#9 14.44 Collecting tzdata==2023.3 (from -r requirements.txt (line 294))
+#9 14.45   Downloading tzdata-2023.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 14.49 Collecting unidecode==1.3.7 (from -r requirements.txt (line 298))
+#9 14.50   Downloading Unidecode-1.3.7-py3-none-any.whl.metadata (13 kB)
+#9 14.54 Collecting urllib3==2.1.0 (from -r requirements.txt (line 300))
+#9 14.55   Downloading urllib3-2.1.0-py3-none-any.whl.metadata (6.4 kB)
+#9 14.76 Collecting uwsgi==2.0.23 (from -r requirements.txt (line 307))
+#9 14.95   Downloading uwsgi-2.0.23.tar.gz (810 kB)
+#9 15.04      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 810.3/810.3 kB 8.1 MB/s  0:00:00
+#9 15.16   Installing build dependencies: started
+#9 15.57   Installing build dependencies: finished with status 'done'
+#9 15.57   Getting requirements to build wheel: started
+#9 15.82   Getting requirements to build wheel: finished with status 'done'
+#9 15.82   Preparing metadata (pyproject.toml): started
+#9 15.94   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 15.96 Collecting vine==5.1.0 (from -r requirements.txt (line 309))
+#9 15.97   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#9 16.00 Collecting wcwidth==0.2.12 (from -r requirements.txt (line 315))
+#9 16.01   Downloading wcwidth-0.2.12-py2.py3-none-any.whl.metadata (14 kB)
+#9 16.04 Collecting webencodings==0.5.1 (from -r requirements.txt (line 319))
+#9 16.05   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+#9 16.08 Collecting webservices==0.7 (from webservices[django]==0.7->-r requirements.txt (line 323))
+#9 16.09   Downloading webservices-0.7.tar.gz (5.8 kB)
+#9 16.11   Installing build dependencies: started
+#9 16.51   Installing build dependencies: finished with status 'done'
+#9 16.51   Getting requirements to build wheel: started
+#9 16.72   Getting requirements to build wheel: finished with status 'done'
+#9 16.72   Preparing metadata (pyproject.toml): started
+#9 16.84   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 17.03 Collecting yarl==1.9.4 (from -r requirements.txt (line 327))
+#9 17.20   Downloading yarl-1.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+#9 17.33 Downloading aiohttp-3.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+#9 17.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 8.9 MB/s  0:00:00
+#9 17.63 Downloading yarl-1.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+#9 17.68 Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+#9 17.70 Downloading amqp-5.2.0-py3-none-any.whl (50 kB)
+#9 17.73 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#9 17.74 Downloading anyio-4.2.0-py3-none-any.whl (85 kB)
+#9 17.96 Downloading ariadne-0.21-py2.py3-none-any.whl (102 kB)
+#9 17.99 Downloading graphql_core-3.2.3-py3-none-any.whl (202 kB)
+#9 18.22 Downloading starlette-0.34.0-py3-none-any.whl (70 kB)
+#9 18.24 Downloading ariadne_django-0.3.0-py3-none-any.whl (18 kB)
+#9 18.27 Downloading asgiref-3.7.2-py3-none-any.whl (24 kB)
+#9 18.30 Downloading attrs-23.1.0-py3-none-any.whl (61 kB)
+#9 18.33 Downloading billiard-4.2.0-py3-none-any.whl (86 kB)
+#9 18.71 Downloading black-23.12.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+#9 18.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 5.9 MB/s  0:00:00
+#9 19.00 Downloading celery-5.3.6-py3-none-any.whl (422 kB)
+#9 19.07 Downloading click-8.1.7-py3-none-any.whl (97 kB)
+#9 19.10 Downloading kombu-5.3.4-py3-none-any.whl (199 kB)
+#9 19.15 Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+#9 19.18 Downloading cffi-1.16.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (477 kB)
+#9 19.26 Downloading charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (141 kB)
+#9 19.29 Downloading click_didyoumean-0.3.0-py3-none-any.whl (2.7 kB)
+#9 19.31 Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+#9 19.33 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#9 19.35 Downloading coveralls-3.3.1-py2.py3-none-any.whl (14 kB)
+#9 19.37 Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+#9 19.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 8.8 MB/s  0:00:00
+#9 19.89 Downloading defusedxml-0.8.0rc2-py2.py3-none-any.whl (25 kB)
+#9 19.91 Downloading Django-4.2.8-py3-none-any.whl (8.0 MB)
+#9 21.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 5.1 MB/s  0:00:01
+#9 21.47 Downloading django_anymail-10.2-py3-none-any.whl (125 kB)
+#9 21.67 Downloading django_debug_toolbar-4.2.0-py3-none-any.whl (223 kB)
+#9 21.73 Downloading django_js_asset-2.2.0-py3-none-any.whl (4.7 kB)
+#9 21.76 Downloading django_mptt-0.15.0-py3-none-any.whl (115 kB)
+#9 21.78 Downloading django_simple_sso-1.2.0-py3-none-any.whl (17 kB)
+#9 21.81 Downloading djangorestframework-3.14.0-py3-none-any.whl (1.1 MB)
+#9 21.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 8.4 MB/s  0:00:00
+#9 22.19 Downloading Faker-21.0.0-py3-none-any.whl (1.7 MB)
+#9 22.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 7.5 MB/s  0:00:00
+#9 22.42 Downloading frozenlist-1.4.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (281 kB)
+#9 22.48 Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+#9 22.52 Downloading idna-3.6-py3-none-any.whl (61 kB)
+#9 22.55 Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+#9 22.57 Downloading Markdown-3.5.1-py3-none-any.whl (102 kB)
+#9 22.81 Downloading misago-0.39.4-py3-none-any.whl (13.7 MB)
+#9 27.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.7/13.7 MB 2.9 MB/s  0:00:04
+#9 27.42 Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+#9 27.44 Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+#9 27.50 Downloading packaging-23.2-py3-none-any.whl (53 kB)
+#9 27.52 Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+#9 27.54 Downloading Pillow-10.1.0-cp312-cp312-manylinux_2_28_x86_64.whl (3.6 MB)
+#9 27.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 8.3 MB/s  0:00:00
+#9 27.98 Downloading platformdirs-4.1.0-py3-none-any.whl (17 kB)
+#9 28.02 Downloading pluggy-1.3.0-py3-none-any.whl (18 kB)
+#9 28.05 Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+#9 28.13 Downloading psycopg-3.1.16-py3-none-any.whl (175 kB)
+#9 28.34 Downloading psycopg_binary-3.1.16-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#9 28.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 8.2 MB/s  0:00:00
+#9 28.75 Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+#9 28.78 Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+#9 28.80 Downloading pytest-7.4.3-py3-none-any.whl (325 kB)
+#9 28.87 Downloading pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+#9 28.90 Downloading pytest_django-4.7.0-py3-none-any.whl (23 kB)
+#9 28.92 Downloading pytest_mock-3.12.0-py3-none-any.whl (9.8 kB)
+#9 28.95 Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#9 28.99 Downloading python3_openid-3.2.0-py3-none-any.whl (133 kB)
+#9 29.03 Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+#9 29.09 Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (724 kB)
+#9 29.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 725.0/725.0 kB 6.8 MB/s  0:00:00
+#9 29.20 Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+#9 29.24 Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+#9 29.26 Downloading urllib3-2.1.0-py3-none-any.whl (104 kB)
+#9 29.31 Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+#9 29.34 Downloading responses-0.24.1-py3-none-any.whl (55 kB)
+#9 29.36 Downloading ruff-0.1.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.4 MB)
+#9 30.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 9.3 MB/s  0:00:00
+#9 30.22 Downloading sentry_sdk-1.39.1-py2.py3-none-any.whl (254 kB)
+#9 30.28 Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#9 30.30 Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+#9 30.32 Downloading social_auth_app_django-5.4.0-py3-none-any.whl (26 kB)
+#9 30.34 Downloading social_auth_core-4.5.1-py3-none-any.whl (406 kB)
+#9 30.42 Downloading sqlparse-0.4.4-py3-none-any.whl (41 kB)
+#9 30.45 Downloading syrupy-4.6.0-py3-none-any.whl (47 kB)
+#9 30.48 Downloading typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+#9 30.51 Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+#9 30.64 Downloading Unidecode-1.3.7-py3-none-any.whl (235 kB)
+#9 30.70 Downloading wcwidth-0.2.12-py2.py3-none-any.whl (34 kB)
+#9 30.73 Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+#9 30.88 Building wheels for collected packages: multidict, coverage, itsdangerous, docopt, uwsgi, webservices
+#9 30.89   Building wheel for multidict (pyproject.toml): started
+#9 31.88   Building wheel for multidict (pyproject.toml): finished with status 'done'
+#9 31.88   Created wheel for multidict: filename=multidict-6.0.4-cp312-cp312-linux_x86_64.whl size=114878 sha256=7b04b42c752f5c817d1061ac2078133001f7eca5aa6d76cf6e0d89dbeb6303bf
+#9 31.88   Stored in directory: /root/.cache/pip/wheels/f6/d8/ff/3c14a64b8f2ab1aa94ba2888f5a988be6ab446ec5c8d1a82da
+#9 31.89   Building wheel for coverage (pyproject.toml): started
+#9 32.45   Building wheel for coverage (pyproject.toml): finished with status 'done'
+#9 32.45   Created wheel for coverage: filename=coverage-6.5.0-cp312-cp312-linux_x86_64.whl size=217261 sha256=7320dd654dd14116dd575c86def3bedfbbe932e732929c451ce1d46b9a32d05d
+#9 32.45   Stored in directory: /root/.cache/pip/wheels/a7/85/79/1888edb87e446075e2d1d011f7470ac992016bc1fc7f65ed38
+#9 32.45   Building wheel for itsdangerous (pyproject.toml): started
+#9 32.59   Building wheel for itsdangerous (pyproject.toml): finished with status 'done'
+#9 32.59   Created wheel for itsdangerous: filename=itsdangerous-0.24-py3-none-any.whl size=10676 sha256=857f8882a935cd969b4e41911b0161b0992abad52d18067a5be575efbee454ba
+#9 32.59   Stored in directory: /root/.cache/pip/wheels/70/9b/6f/ed5d14a98f2b77e9fde65594efe5ee9ba9d28a8d02227703e6
+#9 32.59   Building wheel for docopt (pyproject.toml): started
+#9 32.73   Building wheel for docopt (pyproject.toml): finished with status 'done'
+#9 32.73   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13783 sha256=cd144ecdf7684a31515bc6ace9a9daac71db56840360af18249d5e438a06dee1
+#9 32.73   Stored in directory: /root/.cache/pip/wheels/1a/bf/a1/4cee4f7678c68c5875ca89eaccf460593539805c3906722228
+#9 32.74   Building wheel for uwsgi (pyproject.toml): started
+#9 35.48   Building wheel for uwsgi (pyproject.toml): finished with status 'done'
+#9 35.48   Created wheel for uwsgi: filename=uwsgi-2.0.23-cp312-cp312-linux_x86_64.whl size=551839 sha256=cc7a8cfd8344b033ac4d870769184a31a13a0edc9e7a521c8c0d4f5a6c152c35
+#9 35.48   Stored in directory: /root/.cache/pip/wheels/1b/ec/ca/e5d59412ae7776eb3d5ab026e9883e7bf8e2684f3f1bf8a09d
+#9 35.48   Building wheel for webservices (pyproject.toml): started
+#9 35.61   Building wheel for webservices (pyproject.toml): finished with status 'done'
+#9 35.61   Created wheel for webservices: filename=webservices-0.7-py3-none-any.whl size=6461 sha256=865778a2957b168453f32a614578df917860102d660daef427d5dead8d5aaee5
+#9 35.61   Stored in directory: /root/.cache/pip/wheels/ad/25/34/f49f6ee0ec6426630e2a47bc0f2ccedd59ba1c20db328420f8
+#9 35.62 Successfully built multidict coverage itsdangerous docopt uwsgi webservices
+#9 35.71 Installing collected packages: webencodings, wcwidth, uwsgi, pytz, itsdangerous, docopt, webservices, vine, urllib3, unidecode, tzdata, typing-extensions, sqlparse, sniffio, six, ruff, redis, pyyaml, pyjwt, pycparser, psycopg-binary, prompt-toolkit, pluggy, platformdirs, pillow, pathspec, packaging, oauthlib, mypy-extensions, multidict, markdown, iniconfig, idna, graphql-core, frozenlist, defusedxml, coverage, click, charset-normalizer, certifi, billiard, attrs, asgiref, yarl, sentry-sdk, requests, python3-openid, python-dateutil, pytest, psycopg, html5lib, django, click-repl, click-plugins, click-didyoumean, cffi, anyio, amqp, aiosignal, syrupy, starlette, responses, requests-oauthlib, pytest-mock, pytest-django, pytest-cov, kombu, faker, djangorestframework, django-js-asset, django-debug-toolbar, cryptography, coveralls, aiohttp, social-auth-core, django-simple-sso, django-mptt, django-anymail, celery, black, ariadne, social-auth-app-django, ariadne-django, misago
+#9 42.65 
+#9 42.66 Successfully installed aiohttp-3.9.1 aiosignal-1.3.1 amqp-5.2.0 anyio-4.2.0 ariadne-0.21 ariadne-django-0.3.0 asgiref-3.7.2 attrs-23.1.0 billiard-4.2.0 black-23.12.0 celery-5.3.6 certifi-2023.11.17 cffi-1.16.0 charset-normalizer-3.3.2 click-8.1.7 click-didyoumean-0.3.0 click-plugins-1.1.1 click-repl-0.3.0 coverage-6.5.0 coveralls-3.3.1 cryptography-41.0.7 defusedxml-0.8.0rc2 django-4.2.8 django-anymail-10.2 django-debug-toolbar-4.2.0 django-js-asset-2.2.0 django-mptt-0.15.0 django-simple-sso-1.2.0 djangorestframework-3.14.0 docopt-0.6.2 faker-21.0.0 frozenlist-1.4.1 graphql-core-3.2.3 html5lib-1.1 idna-3.6 iniconfig-2.0.0 itsdangerous-0.24 kombu-5.3.4 markdown-3.5.1 misago-0.39.4 multidict-6.0.4 mypy-extensions-1.0.0 oauthlib-3.2.2 packaging-23.2 pathspec-0.12.1 pillow-10.1.0 platformdirs-4.1.0 pluggy-1.3.0 prompt-toolkit-3.0.43 psycopg-3.1.16 psycopg-binary-3.1.16 pycparser-2.21 pyjwt-2.8.0 pytest-7.4.3 pytest-cov-4.1.0 pytest-django-4.7.0 pytest-mock-3.12.0 python-dateutil-2.8.2 python3-openid-3.2.0 pytz-2023.3.post1 pyyaml-6.0.1 redis-5.0.1 requests-2.31.0 requests-oauthlib-1.3.1 responses-0.24.1 ruff-0.1.8 sentry-sdk-1.39.1 six-1.16.0 sniffio-1.3.0 social-auth-app-django-5.4.0 social-auth-core-4.5.1 sqlparse-0.4.4 starlette-0.34.0 syrupy-4.6.0 typing-extensions-4.9.0 tzdata-2023.3 unidecode-1.3.7 urllib3-2.1.0 uwsgi-2.0.23 vine-5.1.0 wcwidth-0.2.12 webencodings-0.5.1 webservices-0.7 yarl-1.9.4
+#9 42.66 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 DONE 43.4s
+
+#10 [6/6] RUN ./.run bootstrap_plugins
+#10 0.336 /bin/sh: 1: ./.run: not found
+#10 ERROR: process "/bin/sh -c ./.run bootstrap_plugins" did not complete successfully: exit code: 127
+------
+ > [6/6] RUN ./.run bootstrap_plugins:
+0.336 /bin/sh: 1: ./.run: not found
+------
+
+ [33m5 warnings found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 5)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 6)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 3)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE") (line 3)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 4)
+Dockerfile.bak:31
+--------------------
+  29 |     
+  30 |     # Bootstrap plugins
+  31 | >>> RUN ./.run bootstrap_plugins
+  32 |     
+  33 |     # Expose port 3031 from Docker
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c ./.run bootstrap_plugins" did not complete successfully: exit code: 127

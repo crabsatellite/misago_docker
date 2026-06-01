@@ -1,0 +1,55 @@
+================================================================
+ Dockerfile PR Validation Report: misago
+ Generated: Sat Mar  7 12:09:33     2026
+================================================================
+
+
+--- Step 1: Build Original ---
+[FAIL] Original Dockerfile FAILED to build
+BUILD LOG (original):
+------
+ > [6/6] RUN ./.run bootstrap_plugins:
+0.336 /bin/sh: 1: ./.run: not found
+------
+
+ [33m5 warnings found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 5)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 6)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 3)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE") (line 3)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 4)
+Dockerfile.bak:31
+--------------------
+  29 |     
+  30 |     # Bootstrap plugins
+  31 | >>> RUN ./.run bootstrap_plugins
+  32 |     
+  33 |     # Expose port 3031 from Docker
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c ./.run bootstrap_plugins" did not complete successfully: exit code: 127
+
+--- Step 2: Build Fixed ---
+[FAIL] Fixed Dockerfile FAILED to build
+BUILD LOG (fixed):
+------
+ > [6/6] RUN ./.run bootstrap_plugins:
+0.306 /bin/sh: 1: ./.run: not found
+------
+
+ [33m5 warnings found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 3)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE") (line 3)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 4)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 5)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 6)
+Dockerfile:32
+--------------------
+  30 |     
+  31 |     # Bootstrap plugins
+  32 | >>> RUN ./.run bootstrap_plugins
+  33 |     
+  34 |     # Expose port 3031 from Docker
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c ./.run bootstrap_plugins" did not complete successfully: exit code: 127
+
+VERDICT: FAIL — Fixed Dockerfile does not build.
